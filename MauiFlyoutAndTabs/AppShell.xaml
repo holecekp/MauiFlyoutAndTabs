@@ -3,12 +3,29 @@
     x:Class="MauiFlyoutAndTabs.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiFlyoutAndTabs"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:local="clr-namespace:MauiFlyoutAndTabs">
 
-    <ShellContent
-        Title="Hello, World!"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="First">
+        <Tab>
+            <ShellContent
+                Title="First"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Second and third">
+        <Tab Title="Second and third">
+            <ShellContent
+                Title="Second"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage2" />
+
+            <ShellContent
+                Title="Third"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage3" />
+        </Tab>
+    </FlyoutItem>
 
 </Shell>
